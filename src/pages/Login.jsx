@@ -49,15 +49,15 @@ const Login = () => {
 }, [firebase])
 
   return (
-    <div className='h-screen w-screen flex flex-col justify-center items-center gap-4 bg-green-100 dark:bg-[#212121]'>
-       <h1 className='text-4xl font-bold text-green-600 mb-4 dark:text-white'>Login with Email</h1>
-       <div className='flex flex-col h-48 w-96 bg-white justify-center items-center p-8 gap-6 rounded-lg'>
+    <div className='h-screen w-screen flex flex-col justify-center items-center gap-4 bg-green-100 dark:bg-[#212121] px-2 sm:px-0 '>
+       <h1 className=' text-2xl sm:text-4xl font-bold text-green-600 mb-0 sm:mb-4 dark:text-white'>Login with Email</h1>
+       <div className='flex flex-col h-36 sm:h-48 max-w-full w-96 bg-white justify-center items-center sm:p-8 p-4 gap-4 sm:gap-6 rounded-lg'>
       <input
         type="email"
         placeholder="Enter your email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className='w-full px-2 py-2 rounded-md dark:text-black outline outline-green-300'
+        className='w-full px-2 py-2 rounded-md  dark:text-black outline outline-green-300'
       />
       <button onClick={handleSendLink} className='w-full bg-green-600 px-2 cursor-pointer py-2 rounded-md text-white font-semibold'>Send Link</button>
        </div>

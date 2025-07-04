@@ -1,4 +1,3 @@
-// import React, { useState } from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { IoIosNotifications } from "react-icons/io";
 import { useTheme } from "next-themes";
