@@ -3,12 +3,12 @@ import { initializeApp } from "firebase/app"
 import { getAuth, sendSignInLinkToEmail, isSignInWithEmailLink, signInWithEmailLink } from "firebase/auth"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBZTzXT_A7_hzd2eXNmzfvQPmw52VSond8",
-  authDomain: "dashboard-eebcf.firebaseapp.com",
-  projectId: "dashboard-eebcf",
-  storageBucket: "dashboard-eebcf.firebasestorage.app",
-  messagingSenderId: "74358912785",
-  appId: "1:74358912785:web:dccb25f7f3a09bdd9b7eb0"
+   apiKey: "AIzaSyBozBpYlDR-IOYBdIF7W9cETOoPCkfdpmA",
+  authDomain: "notification-58cef.firebaseapp.com",
+  projectId: "notification-58cef",
+  storageBucket: "notification-58cef.firebasestorage.app",
+  messagingSenderId: "700344208778",
+  appId: "1:700344208778:web:6afd383f8c726b94cb4c73"
 };
 
 
