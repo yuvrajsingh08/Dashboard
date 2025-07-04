@@ -18,35 +18,36 @@ const Login = () => {
     }
   }
   
- useEffect(() => {
+useEffect(() => {
   const checkMagicLinkSignIn = async () => {
     try {
       const auth = firebase.firebaseAuth;
       const url = window.location.href;
 
       if (firebase.isSignInWithEmailLink(auth, url)) {
-        let email = window.localStorage.getItem('emailForSignIn')
+        let email = window.localStorage.getItem('emailForSignIn');
         if (!email) {
-          email = window.prompt('Please provide your email for confirmation')
+          email = window.prompt('Please provide your email for confirmation');
         }
 
         if (!email) {
-          toast.info("Email is required to complete sign in")
+          toast.info("Email is required to complete sign-in");
           return;
         }
 
-        await firebase.signInWithMagicLink(email, url)
-        window.localStorage.removeItem('emailForSignIn')
-        toast.success("Successfully signed in!")
+        await firebase.signInWithMagicLink(email, url);
+        toast.success("Successfully signed in!");
       }
     } catch (error) {
-      console.error("Magic link sign-in failed:", error.code, error.message)
-      toast.error("Sign-in failed: " + error.message)
+      console.error("Magic link sign-in failed:", error.code, error.message);
+      toast.error("Sign-in failed: " + error.message);
+    } finally {
+      window.localStorage.removeItem('emailForSignIn');
     }
-  }
+  };
 
   checkMagicLinkSignIn();
-}, [firebase])
+}, [firebase]);
 
   return (
     <div className='h-screen w-screen flex flex-col justify-center items-center gap-4 bg-green-100 dark:bg-[#212121] px-2 sm:px-0 '>
