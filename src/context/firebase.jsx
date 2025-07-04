@@ -21,7 +21,7 @@ export const useFirebase = () => useContext(FirebaseContext)
 export const FirebaseProvider = (props) => {
  const sendMagicLink = async (email) => {
     const actionCodeSettings = {
-      url: 'http://localhost:5173/login',
+      url: 'https://dashboard-beta-virid.vercel.app/login',
       handleCodeInApp: true,
     }
 
